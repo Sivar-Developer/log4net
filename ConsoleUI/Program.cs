@@ -15,7 +15,23 @@ namespace ConsoleUI
         {
             Console.WriteLine("Hello World!");
 
-            log.Error("This is my error msg");
+            // log.Error("This is my error msg");
+            log.Debug("Developer: Tutorial was run");
+            log.Info("Maintanance: Water pump turned on");
+            log.Warn("Maintanace: The water pump is getting hot");
+
+            var i = 0;
+
+            try
+            {
+                var x = 10 / i;
+            }
+            catch (DivideByZeroException ex)
+            {
+                log.Error("Developer: we tried to divide by zero again", ex);
+            }
+
+            log.Fatal("Maintanace: water pump exploded");
 
             Console.ReadLine();
         }
