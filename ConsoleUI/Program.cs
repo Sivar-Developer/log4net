@@ -15,6 +15,8 @@ namespace ConsoleUI
         {
             Console.WriteLine("Hello World!");
 
+            log.Error("This is my error msg");
+
             Console.ReadLine();
         }
     }
